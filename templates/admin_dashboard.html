@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/static/dashboard.css">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Admin Dashboard</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">All Grievances</a></li>
+            <li><a href="#">Users</a></li>
+            <li><a href="#" id="logoutButton">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="main-container">
+        <h1>Welcome, <span id="userName"></span></h1>
+        <div class="stats-container">
+            <div class="stat-card submitted">
+                <h3>Pending</h3>
+                <p id="submittedCount">0</p>
+            </div>
+            <div class="stat-card resolved">
+                <h3>Resolved</h3>
+                <p id="resolvedCount">0</p>
+            </div>
+            <div class="stat-card closed">
+                <h3>In Progress</h3>
+                <p id="closedCount">0</p>
+            </div>
+        </div>
+        <div class="grievances-container">
+            <h2>All Grievances</h2>
+            <input type="text" class="filter-input" id="filterInput" placeholder="Search grievances...">
+            <ul id="grievanceList"></ul>
+        </div>
+    </div>
+
+    <script src="/static/grievance_admin.js"></script>
+</body>
+</html>
