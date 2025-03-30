@@ -60,6 +60,9 @@ Access at http://localhost:8000/.
 
 ### Features by Role
 - Login: Visit http://localhost:8000/ and enter credentials.
+- admin/admin123 → http://localhost:8000/admin-dashboard/
+- employee1/emp123 → http://localhost:8000/employee/
+- regular user → http://localhost:8000/dashboard/
   
 **User Dashboard:**
 - Submit grievances (e.g., Technical, Billing).
