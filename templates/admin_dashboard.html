@@ -6,20 +6,21 @@
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="/static/dashboard.css">
     <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="sidebar">
         <h2>Admin Dashboard</h2>
         <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">All Grievances</a></li>
-            <li><a href="#">Users</a></li>
+            <li><a href="#">Grievances</a></li>
+            <li><a href="#">Settings</a></li>
             <li><a href="#" id="logoutButton">Logout</a></li>
         </ul>
     </div>
 
     <div class="main-container">
-        <h1>Welcome, <span id="userName"></span></h1>
+        <h1>Welcome</h1>
         <div class="stats-container">
             <div class="stat-card submitted">
                 <h3>Pending</h3>
@@ -34,13 +35,38 @@
                 <p id="closedCount">0</p>
             </div>
         </div>
+        <canvas id="grievanceChart" width="400" height="200"></canvas>
         <div class="grievances-container">
             <h2>All Grievances</h2>
+            <button id="downloadCsv" class="grievance-button">Download CSV</button>
+            <form id="filterForm">
+                <label>Date Range:</label>
+                <input type="date" id="startDate" name="start_date">
+                <input type="date" id="endDate" name="end_date">
+                <label>Type:</label>
+                <select id="grievanceType" name="category">
+                    <option value="">All</option>
+                    <option value="Technical">Technical</option>
+                    <option value="Billing">Billing</option>
+                    <option value="Service">Service</option>
+                    <option value="General">General</option>
+                    <option value="Feedback">Feedback</option>
+                </select>
+                <label>Status:</label>
+                <select id="status" name="status">
+                    <option value="">All</option>
+                    <option value="Pending">Pending</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Resolved">Resolved</option>
+                    <option value="Closed">Closed</option>
+                </select>
+                <button type="submit" class="grievance-button">Apply Filters</button>
+            </form>
             <input type="text" class="filter-input" id="filterInput" placeholder="Search grievances...">
             <ul id="grievanceList"></ul>
         </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/static/grievance_admin.js"></script>
 </body>
 </html>

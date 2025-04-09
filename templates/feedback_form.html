@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Feedback</title>
+    <link rel="stylesheet" href="/static/dashboard.css">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1>Submit Feedback</h1>
+        <p>Grievance: <strong id="grievanceTitle"></strong></p>
+        <form id="feedbackForm">
+            <div class="grievance-inputs">
+                <label for="rating">Rating (1-5):</label>
+                <select id="rating" required>
+                    <option value="" disabled selected>Select rating</option>
+                    <option value="1">1 Star</option>
+                    <option value="2">2 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="5">5 Stars</option>
+                </select>
+            </div>
+            <div class="grievance-inputs">
+                <label for="comment">Comment (optional):</label>
+                <textarea id="comment" rows="3"></textarea>
+            </div>
+            <button type="submit" class="grievance-button">Submit Feedback</button>
+        </form>
+    </div>
+
+    <script src="/static/feedback.js"></script>
+</body>
+</html>

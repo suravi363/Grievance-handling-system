@@ -19,7 +19,7 @@
     </div>
 
     <div class="main-container">
-        <h1>Welcome, <span id="userName"></span></h1>
+        <h1>Welcome, <span id="userName">Employee</span></h1>
         <div class="stats-container">
             <div class="stat-card submitted">
                 <h3>Pending</h3>
@@ -35,29 +35,9 @@
             </div>
         </div>
         <div class="grievances-container">
-            <h2>Recent Grievances</h2>
+            <h2>Manage Grievances</h2>
             <input type="text" class="filter-input" id="filterInput" placeholder="Search grievances...">
             <ul id="grievanceList"></ul>
-            <h2>Add a New Grievance</h2>
-            <form class="grievance-form" id="grievanceForm">
-                <div class="grievance-inputs">
-                    <select id="issueType" required>
-                        <option value="" disabled selected>Select Issue Type</option>
-                        <option value="Technical">Technical Issue</option>
-                        <option value="Billing">Billing Problem</option>
-                        <option value="Service">Service Complaint</option>
-                        <option value="General">General Issue</option>
-                        <option value="Feedback">Feedback</option>
-                    </select>
-                </div>
-                <div class="grievance-inputs">
-                    <input type="text" id="grievanceTitle" placeholder="Title of grievance" required>
-                </div>
-                <div class="grievance-inputs">
-                    <textarea id="grievanceDescription" placeholder="Describe your grievance in detail..." rows="3" required></textarea>
-                </div>
-                <button type="submit" class="grievance-button">Submit Grievance</button>
-            </form>
         </div>
     </div>
 

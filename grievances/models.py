@@ -16,3 +16,13 @@ class Grievance(models.Model):
 
     def __str__(self):
         return f"{self.title} - {self.status}"
+
+class Feedback(models.Model):
+    grievance = models.OneToOneField(Grievance, on_delete=models.CASCADE, limit_choices_to={'status': 'Resolved'})
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    rating = models.IntegerField(choices=[(i, str(i)) for i in range(1, 6)], help_text="1-5 stars")
+    comment = models.TextField(blank=True)
+    submitted_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Feedback for {self.grievance.title} - {self.rating} stars"
