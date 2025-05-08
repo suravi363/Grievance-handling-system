@@ -23,7 +23,7 @@ A Django-based web application designed to manage grievances efficiently, with r
 
 ### 1. Clone the Repository
 ```
-git clone https://github.com/Springboard-Internship-2024/Grievance-Handling-System_Feb_2025.git
+git clone git https://github.com/suravi363/Grievance-handling-system.git
 cd Grievance-Handling-System_Feb_2025
 git checkout suravi
 ```
@@ -65,7 +65,7 @@ Access at http://localhost:8000/.
 - regular user → http://localhost:8000/dashboard/
   
 **User Dashboard:**
-- Submit grievances (e.g., Technical, Billing).
+- Submit grievances (e.g: Technical, Billing).
 - View your grievances with status.
 
 **Employee Dashboard:**
